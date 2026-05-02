@@ -69,7 +69,7 @@ print(x+y);";
 
 ## Tech Stack & Requirements
 *   **Java 21** (Compatible with Java 11+)
-*   **ANTLR 4.11.11** (Provided as a `.jar` in the build path. In VSCode: Java projects -> Referenced Libraries -> Add `antlr-4.11.1-complete.jar`)
+*   **ANTLR 4.11.1** (Provided as a `.jar` in the build path. In VSCode: Java projects -> Referenced Libraries -> Add `antlr-4.11.1-complete.jar`)
 
 ## How to Generate and Run
 1. Generate lexer, parser, and visitor files from the grammar (in the main folder):
