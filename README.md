@@ -69,12 +69,12 @@ print(x+y);";
 
 ## Tech Stack & Requirements
 *   **Java 21** (Compatible with Java 11+)
-*   **ANTLR 4.11.11** (Provided as a `.jar` in the build path. In VSCode: Java projects -> Referenced Libraries -> Add `antlr-4.11.1-complete.jar`)
+*   **ANTLR 4.11.1** (Provided as a `.jar` in the build path. In VSCode: Java projects -> Referenced Libraries -> Add `antlr-4.11.1-complete.jar`)
 
 ## How to Generate and Run
 1. Generate lexer, parser, and visitor files from the grammar (in the main folder):
-   ```bash
-   java -jar .\antlr-4.11.1-complete.jar  .\src\ScriptLang.g4 -visitor -no-listener
-   ```
+```bash
+java -jar .\antlr-4.11.1-complete.jar  .\src\ScriptLang.g4 -visitor -no-listener
+```
 2. Compile the Java files
 3. Run `Main.java` to execute the embedded test script (provided a few examples).
