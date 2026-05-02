@@ -26,17 +26,16 @@ public class Main {
         //     "print(max);\n";               // 20-at kell kiírnia
 
         // Példa input #1
-        // String code = 
-        //     "int starttime;\n" +
-        //     "int sum;\n" +
-        //     "int x;\n" +
-        //     "starttime = TIME;\n" +
-        //     "sum = 0;\n" +
-        //     "for (x=0; x<10; x=x+1) {\n" +
-        //     "  sum = sum + x;\n" +
-        //     "}\n" +
-        //     "print(sum);\n" +
-        //     "print(TIME - starttime);\n";
+        String code = 
+            "int starttime = TIME;\n" +
+            "int sum = 0;\n" +
+            "int x;\n" +
+            "// Calculate sum\n" +
+            "for (x=0; x<10; x=x+1) {\n" +
+            "  sum = sum + x;\n" +
+            "}\n" +
+            "print(sum);\n" +
+            "print(TIME - starttime);\n";
 
         // String code = 
         //     "int choice;\n" +
@@ -65,10 +64,18 @@ public class Main {
         //     "}\n" +
         //     "print(x+y);\n";
         
-        String code =
-            "int x = 5;\n" +
-            "double y = x * 2.5;\n" +
-            "print(x, y);\n";
+        // String code =
+        //     "int x;\n" + 
+        //     "int y = 5;\n" + 
+        //     "scan(x); // Wait for user input\n" + 
+        //     "\n" + 
+        //     "switch(x) {\n" + 
+        //     "    case 1: print(111); break;\n" + 
+        //     "    case 2: del y;      // Fall-through happens here\n" + 
+        //     "    case 3: x = 5; break;\n" + 
+        //     "    default: x = 10;\n" + 
+        //     "}\n" +
+        //     "print(x+y);\n";
 
         // 1. Lexer
         CharStream input = CharStreams.fromString(code);
