@@ -1,5 +1,7 @@
 grammar ScriptLang;
 // java -jar .\antlr-4.11.1-complete.jar  .\src\ScriptLang.g4 -visitor -no-listener
+// javac -cp ".;antlr-4.11.1-complete.jar" .\src\ScriptLang*.java
+// java -cp ".;antlr-4.11.1.-complete.jar;src" org.antlr.v4.gui.TestRig ScriptLang program -gui Test.txt 
 
 options {
 	language = Java;
