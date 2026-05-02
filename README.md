@@ -73,8 +73,8 @@ print(x+y);";
 
 ## How to Generate and Run
 1. Generate lexer, parser, and visitor files from the grammar (in the main folder):
-   ```bash
-   java -jar .\antlr-4.11.1-complete.jar  .\src\ScriptLang.g4 -visitor -no-listener
-   ```
+```bash
+java -jar .\antlr-4.11.1-complete.jar  .\src\ScriptLang.g4 -visitor -no-listener
+```
 2. Compile the Java files
 3. Run `Main.java` to execute the embedded test script (provided a few examples).
