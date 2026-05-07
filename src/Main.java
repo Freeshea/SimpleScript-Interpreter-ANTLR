@@ -2,6 +2,9 @@ import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 import ast.Node;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class Main {
     public static void main(String[] args) throws Exception{
 
@@ -26,16 +29,16 @@ public class Main {
         //     "print(max);\n";               // 20-at kell kiírnia
 
         // Példa input #1
-        String code = 
-            "int starttime = TIME;\n" +
-            "int sum = 0;\n" +
-            "int x;\n" +
-            "// Calculate sum\n" +
-            "for (x=0; x<10; x=x+1) {\n" +
-            "  sum = sum + x;\n" +
-            "}\n" +
-            "print(sum);\n" +
-            "print(TIME - starttime);\n";
+        // String code = 
+        //     "int starttime = TIME;\n" +
+        //     "int sum = 0;\n" +
+        //     "int x;\n" +
+        //     "// Calculate sum\n" +
+        //     "for (x=0; x<10; x=x+1) {\n" +
+        //     "  sum = sum + x;\n" +
+        //     "}\n" +
+        //     "print(sum);\n" +
+        //     "print(TIME - starttime);\n";
 
         // String code = 
         //     "int choice;\n" +
@@ -77,6 +80,19 @@ public class Main {
         //     "}\n" +
         //     "print(x+y);\n";
 
+
+        // 0. File reading
+        String filePath = "Test.txt";
+        String code = "";
+
+        try{
+            code = Files.readString(Paths.get(filePath));
+        } catch (Exception e){
+            System.err.println("Error: cannot find the '" + filePath +"' file!");
+            System.err.println("Please make sure the file is in the same folder as the 'src' folder!");
+            return;
+        }
+
         // 1. Lexer
         CharStream input = CharStreams.fromString(code);
         ScriptLangLexer lexer = new ScriptLangLexer(input);
@@ -90,7 +106,7 @@ public class Main {
         MyVisitor visitor = new MyVisitor();
         Node ast = visitor.visit(tree);
 
-        // 4. Végrehajtás
+        // 4. Execution
         System.out.println("--- Program kimenete ---");
         ast.evaluate();
         System.out.println("------------------------");
