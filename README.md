@@ -77,4 +77,4 @@ print(x+y);";
 java -jar .\antlr-4.11.1-complete.jar  .\src\ScriptLang.g4 -visitor -no-listener
 ```
 2. Compile the Java files
-3. Run `Main.java` to execute the embedded test script (provided a few examples).
+3. Run `Main.java` to execute the program and read from the `Test.txt` file ( or use the embedded scripts that are provided in code).
